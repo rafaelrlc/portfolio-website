@@ -25,7 +25,7 @@ const Contact = () => {
       <div className="max-w-[80%] h-full mx-auto grid lg:grid-cols-2 items-center gap-5">
         <div className=" my-4">
           <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">
-            Do you have interess on working with me?
+            Do you have interess to work with me?
           </h1>
         </div>
         <form className="my-4 flex flex-col" onSubmit={handleSubmit(onSubmit)}>
@@ -44,7 +44,7 @@ const Contact = () => {
           </div>
           <div className="flex flex-col sm:flex-row sm:mt-0 mt-6 items-center justify-between w-full">
             <input
-              className="p-3 flex w-full rounded-md text-black"
+              className="p-3 flex w-full rounded-md text-black font-medium"
               type="email"
               placeholder="Your Email"
               {...register("email")}

@@ -13,10 +13,16 @@ const Navbar = () => {
 
   function scrollFunction() {
     if (
-      document.body.scrollTop > 650 ||
-      document.documentElement.scrollTop > 650
+      (document.body.scrollTop > 650 && document.body.scrollTop < 1300) ||
+      (document.documentElement.scrollTop > 650 &&
+        document.documentElement.scrollTop < 1300)
     ) {
       setNavColor("text-black");
+    } else if (
+      document.body.scrollTop >= 1300 ||
+      document.documentElement.scrollTop >= 1300
+    ) {
+      setNavColor("text-white");
     } else {
       setNavColor("text-white");
     }

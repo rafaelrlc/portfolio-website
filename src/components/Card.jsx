@@ -2,16 +2,19 @@ import React from "react";
 import { AiFillGithub } from "react-icons/ai";
 const Card = (props) => {
   return (
-    <div class="max-w-sm max-h-[100%] min-h-[100%]  border rounded-2xl shadow bg-gray-900 border-gray-700">
-      <a>
-        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-      </a>
-      <div class="p-5">
+    <div class="p-5 rounded-2xl sm:w-[360px] w-full bg-gray-800 h-full shadow-xl">
+      <div class="p-3">
         <a>
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white text-center">
+          <h5 class="mb-4 text-2xl md:text-3xl font-bold tracking-tight text-white text-center">
             {props.title}
           </h5>
-          <img className="w-[500px] mx-auto my-4" src={props.image} />
+          <div className="relative w-full h-[230px] rounded mb-4">
+            <img
+              src={props.image}
+              alt="project_image"
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </div>
         </a>
         <p class="mb-3 font-normal text-white">{props.description}</p>
         <a class="flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 bg-indigo-700 hover:cursor-pointer">
