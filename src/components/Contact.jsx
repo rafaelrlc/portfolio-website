@@ -3,7 +3,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { contactSchema } from "../schemas/schemas";
 
-api_key = "8ef1328d-3250-4ae7-acb3-b5c423d07edd";
 const Contact = () => {
   const {
     register,
