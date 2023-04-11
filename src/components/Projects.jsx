@@ -9,6 +9,7 @@ const Projects = () => {
       image={item.image}
       title={item.title}
       description={item.description}
+      project_link={item.project_link}
     ></Card>
   ));
 
@@ -26,7 +27,8 @@ const Projects = () => {
             len
           />
         </h1>
-        <div className="w-full bg-gray-600 justify-center h-full grid lg:grid-cols-3 md:p-0 p-5 items-center gap-10">
+
+        <div className="w-full bg-gray-600 justify-center h-full grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 md:p-0 p-10 items-center gap-10 ">
           {projetos}
         </div>
       </div>
