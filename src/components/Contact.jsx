@@ -28,11 +28,9 @@ const Contact = () => {
           <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">
             Do you have interess to work with me?
           </h1>
-          <p className="py-5">E-mail: rafaelribeirolcc@gmail.com</p>
         </div>
         <form className="my-4 flex flex-col" onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <h3 class="text-lg font-medium text-white mb-2">Text me:</h3>
             <textarea
               id="message"
               rows="4"

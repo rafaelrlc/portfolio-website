@@ -20,11 +20,11 @@ const About = () => {
           <p className="text-gray-900 font-bold">
             My name is Rafael, I'm 19 years old and I'm currently in my 4th
             semester of Computer Science at the Federal University of Alagoas
-            (UFAL). I have experience with React, Next.js, Python, Java (Spring
-            Boot), MySQL, HTML/CSS, and Tailwind/Styled Components. I work as a
-            volunteer at MobiUfal developing applications with React and
-            TypeScript. In general, my interest is software development, from
-            front to backend and I am motivated to learn new things
+            (UFAL). I have experience with Python, React, Next.js, Express, Java
+            (Spring Boot), MySQL, HTML/CSS, and Tailwind. I work as a volunteer
+            at MobiUfal developing applications with React and TypeScript. In
+            general, my interest is software development, from front to backend
+            and I am motivated to learn new things.
           </p>
         </div>
       </div>

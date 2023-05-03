@@ -30,9 +30,8 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex h-24 items-center w-full mx-auto px-4 ${navColor} md:justify-between justify-start fixed`}
+      className={`flex h-24 items-center w-full mx-auto px-4 ${navColor} md:justify-end justify-start fixed`}
     >
-      <h1></h1>
       <ul className="hidden md:flex">
         <li className="group transition-all duration-200 ease-in-out py-2 hover:cursor-pointer">
           <a
@@ -105,32 +104,34 @@ const Navbar = () => {
       <div
         className={
           !mobileNav
-            ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-gray-900 ease-in-out duration-500 md:hidden"
+            ? "fixed opacity-[.99] left-0 top-0 w-[100%] h-full border-r border-r-gray-900 bg-gray-900 ease-in-out duration-500 md:hidden"
             : "fixed left-[-100%]"
         }
       >
-        <div className="flex items-center justify-center m-4">
-          <h1 className="w-full text-3xl font-bold text-indigo-500">R.R</h1>
+        <div className="flex items-center justify-center m-4 fixed">
           <MdOutlineClose
             className="text-2xl hover:cursor-pointer"
             onClick={() => setMobileNav(!mobileNav)}
           ></MdOutlineClose>
         </div>
 
-        <ul className="pt-4" onClick={() => setMobileNav(!mobileNav)}>
+        <ul
+          className="pt-4 flex flex-col items-center gap-10 justify-center h-full mb-120"
+          onClick={() => setMobileNav(!mobileNav)}
+        >
           <li
-            className={`p-4 border-b border-gray-700  hover:bg-gray-800 cursor-pointer ${navColor}`}
+            className={`p-4 hover:cursor-pointer hover:text-gray-400 ${navColor}`}
           >
-            <a href="#home">Home</a>
+            <a href="#home">HOME</a>
           </li>
-          <li className="p-4 border-b border-gray-700  hover:bg-gray-800 cursor-pointer">
-            <a href="#about">About</a>
+          <li className="p-4  hover:cursor-pointer hover:text-gray-400">
+            <a href="#about">ABOUT</a>
           </li>
-          <li className="p-4 border-b border-gray-700  hover:bg-gray-800 cursor-pointer">
-            <a href="#projects">Projects</a>
+          <li className="p-4  hover:cursor-pointer hover:text-gray-400">
+            <a href="#projects">PROEJCTS</a>
           </li>
-          <li className="p-4 border-b border-gray-700  hover:bg-gray-800 cursor-pointer">
-            <a href="#contact">Contact</a>
+          <li className="p-4  hover:cursor-pointer hover:text-gray-400">
+            <a href="#contact">CONTACT</a>
           </li>
         </ul>
       </div>
