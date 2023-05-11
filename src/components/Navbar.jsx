@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex h-24 items-center w-full mx-auto px-4 ${navColor} md:justify-end justify-start fixed`}
+      className={`flex h-24 shadow items-center w-full mx-auto px-4 bg-black md:justify-end justify-start fixed `}
     >
       <ul className="hidden md:flex">
         <li className="group transition-all duration-200 ease-in-out py-2 hover:cursor-pointer">
@@ -40,7 +40,7 @@ const Navbar = () => {
           >
             {" "}
             <span
-              className={`${navColor} bg-left-bottom bg-gradient-to-r from-indigo-600 to-indigo-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`${navColor} bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               Home
             </span>
@@ -53,7 +53,7 @@ const Navbar = () => {
           >
             {" "}
             <span
-              className={`${navColor} bg-left-bottom bg-gradient-to-r from-indigo-600 to-indigo-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`${navColor} bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               About
             </span>
@@ -66,7 +66,7 @@ const Navbar = () => {
           >
             {" "}
             <span
-              className={`${navColor} bg-left-bottom bg-gradient-to-r from-indigo-600 to-indigo-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`${navColor} bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               Projects
             </span>
@@ -79,7 +79,7 @@ const Navbar = () => {
           >
             {" "}
             <span
-              className={`${navColor} bg-left-bottom bg-gradient-to-r from-indigo-600 to-indigo-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`${navColor} bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               Contact
             </span>
@@ -95,7 +95,7 @@ const Navbar = () => {
             {" "}
             <AiOutlineMenu
               size={20}
-              className="hover:cursor-pointer"
+              className="hover:cursor-pointer text-white"
             ></AiOutlineMenu>
           </div>
         )}
@@ -104,7 +104,7 @@ const Navbar = () => {
       <div
         className={
           !mobileNav
-            ? "fixed opacity-[.99] left-0 top-0 w-[100%] h-full border-r border-r-gray-900 bg-gray-900 ease-in-out duration-500 md:hidden"
+            ? "fixed opacity-[.98] bg-black left-0 top-0 w-[100%] h-full ease-in-out duration-500 md:hidden"
             : "fixed left-[-100%]"
         }
       >
@@ -116,7 +116,7 @@ const Navbar = () => {
         </div>
 
         <ul
-          className="pt-4 flex flex-col items-center gap-10 justify-center h-full mb-120"
+          className="pt-4 flex flex-col items-center gap-10 justify-center h-full mb-120 text-white"
           onClick={() => setMobileNav(!mobileNav)}
         >
           <li

@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     image:
-      "https://raw.githubusercontent.com/rafaelrlc/Psico-Daily/83cb506b50cb590ee0a9b2acfc2f218867534df0/utils/rS_.svg",
+      "https://cdn.discordapp.com/attachments/714891795129171983/1103870247628439652/image.png",
     title: "PsicoDaily",
     description:
       "A website to help the communication between the psychologistetween the psychologistetween the psychologist and the patient, this fullstack project. The backend was made in Express and MongoDB.",
@@ -43,7 +43,7 @@ export const projects = [
 
   {
     image:
-      "https://raw.githubusercontent.com/rafaelrlc/portfolio-website/fd35951bf820b9658b98b1299eb51d5dd81593f1/src/assets/Coding-bro%20(1).svg",
+      "https://cdn.discordapp.com/attachments/886688344363388958/1066155147878735923/447-4477229_winter-anime-girl-icon-hd-png-download.png",
     title: "Andromeda 2.0",
     description: "The version 2.0 of Andromeda, now with a lot more features.",
     project_link: "https://github.com/rafaelrlc/Andromeda",

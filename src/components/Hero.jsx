@@ -4,13 +4,13 @@ const Hero = () => {
   return (
     <div className="text-white" id="home">
       <div className=" w-full h-[100vh] mx-auto flex flex-col justify-center items-center py-16">
-        <p className="text-indigo-500 sm:text-2xl md:text-3xl text-2xl font-bold ">
+        <p className="text-[#FF9119] sm:text-2xl md:text-[1.55rem] text-xl font-bold">
           SOFTWARE DEVELOPER
         </p>
         <div className="group transition-all duration-300 ease-in-out py-2 hover:cursor-pointer">
           <h1
-            className="sm:text-6xl md:text-7xl text-[2.75rem]
-             leading-none font-bold bg-left-bottom bg-gradient-to-r from-indigo-600 to-indigo-500 md:bg-[length:0%_2px] bg-[length:0%_2px] bg-no-repeat md:group-hover:bg-[length:100%_4px] group-hover:bg-[length:100%_3px] transition-all duration-500 ease-out "
+            className="sm:text-xl md:text-6xl text-[2.75rem]
+             leading-none font-bold bg-left-bottom "
           >
             RAFAEL RIBEIRO
           </h1>
@@ -24,7 +24,7 @@ const Hero = () => {
               fontSize: "1.3rem",
             }}
             startDelay={1000}
-            cursorColor="#3526c0"
+            cursorColor="#FF9119"
             multiText={[
               "React.js",
               "Next.js",
@@ -38,6 +38,11 @@ const Hero = () => {
             multiTextLoop={true}
           />
         </p>
+        <a href="#contact">
+          <button className="bg-[#FF9119] rounded w-[200px] py-2 mt-4 hover:bg-[#e07e16]">
+            Contact Me
+          </button>
+        </a>
       </div>
     </div>
   );
