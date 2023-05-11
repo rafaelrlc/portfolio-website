@@ -14,22 +14,27 @@ const Projects = () => {
   ));
 
   return (
-    <div id="projects" className="bg-gray-600">
-      {" "}
-      <div className="bg-gray-600 py-16 max-w-[1240px] mx-auto flex items-start justify-center flex-col h-full gap-20">
-        <h1 className="bg-gray-600 text-center font-bold text-6xl text-white ml-5">
-          <TypeWriterEffect
-            startDelay={0}
-            cursorColor="transparent"
-            multiText={["Projects"]}
-            multiTextDelay={1000}
-            typeSpeed={50}
-            len
-          />
-        </h1>
+    <div className="flex flex-col justify-center items-center">
+      <div
+        id="projects"
+        className="bg-gray-900 items-center justify-center  px-8 max-w-[1340px]"
+      >
+        {" "}
+        <div className="py-16 mx-auto flex items-start justify-center flex-col h-full">
+          <h1 className="font-bold text-4xl text-white ml-5">
+            <TypeWriterEffect
+              startDelay={0}
+              cursorColor="transparent"
+              multiText={["My Projects"]}
+              multiTextDelay={1000}
+              typeSpeed={50}
+              len
+            />
+          </h1>
 
-        <div className="w-full bg-gray-600 justify-center h-full grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 md:p-0 p-10 items-center gap-10 ">
-          {projetos}
+          <div className="mt-14 w-full xl:mx-auto grid lg:grid-cols-3 gap-10">
+            {projetos}
+          </div>
         </div>
       </div>
     </div>

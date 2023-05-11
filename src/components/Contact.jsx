@@ -21,15 +21,18 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full py-16 text-white px-4 h-full bg-gray-800"
+      className="w-full py-16 text-white px-4 h-full bg-gray-900 text-center md:text-start"
     >
-      <div className="max-w-[80%] h-full mx-auto grid lg:grid-cols-2 items-center gap-5">
+      <div className="max-w-[1340px] h-full mx-auto grid lg:grid-cols-3 items-center gap-5">
         <div className=" my-4">
           <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">
             Do you have interess to work with me?
           </h1>
         </div>
-        <form className="my-4 flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+        <form
+          className="my-4 flex flex-col col-span-2"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <div>
             <textarea
               id="message"

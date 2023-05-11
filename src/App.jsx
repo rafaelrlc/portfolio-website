@@ -6,13 +6,13 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 function App() {
   return (
-    <div>
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <About></About>
-      <Projects></Projects>
-      <Contact></Contact>
-      <Footer></Footer>
+    <div className="">
+      <Navbar />
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }

@@ -7,26 +7,26 @@ const Navbar = () => {
   const [mobileNav, setMobileNav] = useState(true);
   const [navColor, setNavColor] = useState("text-white");
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
+  // window.onscroll = function () {
+  //   scrollFunction();
+  // };
 
-  function scrollFunction() {
-    if (
-      (document.body.scrollTop > 650 && document.body.scrollTop < 1300) ||
-      (document.documentElement.scrollTop > 650 &&
-        document.documentElement.scrollTop < 1300)
-    ) {
-      setNavColor("text-black");
-    } else if (
-      document.body.scrollTop >= 1300 ||
-      document.documentElement.scrollTop >= 1300
-    ) {
-      setNavColor("text-white");
-    } else {
-      setNavColor("text-white");
-    }
-  }
+  // function scrollFunction() {
+  //   if (
+  //     (document.body.scrollTop > 650 && document.body.scrollTop < 1300) ||
+  //     (document.documentElement.scrollTop > 650 &&
+  //       document.documentElement.scrollTop < 1300)
+  //   ) {
+  //     setNavColor("text-black");
+  //   } else if (
+  //     document.body.scrollTop >= 1300 ||
+  //     document.documentElement.scrollTop >= 1300
+  //   ) {
+  //     setNavColor("text-white");
+  //   } else {
+  //     setNavColor("text-white");
+  //   }
+  // }
 
   return (
     <div
