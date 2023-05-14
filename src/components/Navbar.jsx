@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex h-24 shadow items-center w-full mx-auto px-4 bg-black md:justify-end justify-start fixed `}
+      className={`flex h-24 shadow items-center bg-transparent w-full mx-auto px-4 bg-black md:justify-end justify-start fixed`}
     >
       <ul className="hidden md:flex">
         <li className="group transition-all duration-200 ease-in-out py-2 hover:cursor-pointer">
@@ -104,11 +104,11 @@ const Navbar = () => {
       <div
         className={
           !mobileNav
-            ? "fixed opacity-[.98] bg-black left-0 top-0 w-[100%] h-full ease-in-out duration-500 md:hidden"
-            : "fixed left-[-100%]"
+            ? "fixed opacity-[.90] bg-black left-0 top-0 w-[100%] h-full ease-in-out duration-500 md:hidden"
+            : "fixed left-[-100%] bottom-[-100%]"
         }
       >
-        <div className="flex items-center justify-center m-4 fixed">
+        <div className="flex items-center justify-center m-4 text-white fixed">
           <MdOutlineClose
             className="text-2xl hover:cursor-pointer"
             onClick={() => setMobileNav(!mobileNav)}

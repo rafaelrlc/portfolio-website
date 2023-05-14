@@ -4,9 +4,10 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import Modal from "./components/ModalTest";
 function App() {
   return (
-    <div className="bg-black">
+    <div className="bg-[#101010]">
       <Navbar />
       <Hero />
       <About />

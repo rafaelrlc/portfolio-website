@@ -9,30 +9,29 @@ const Projects = () => {
       image={item.image}
       title={item.title}
       description={item.description}
-      project_link={item.project_link}
+      url={item.url}
     ></Card>
   ));
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col items-center justify-center">
       <div
         id="projects"
         className="items-center justify-center mt-16 px-8 max-w-[1340px]"
       >
         {" "}
         <div className="py-16 mx-auto flex items-start justify-center flex-col h-full">
-          <h1 className="font-bold text-4xl text-white ml-5">
+          <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
             <TypeWriterEffect
               startDelay={0}
               cursorColor="transparent"
               multiText={["My Projects"]}
               multiTextDelay={1000}
               typeSpeed={50}
-              len
             />
           </h1>
 
-          <div className="mt-14 w-full xl:mx-auto grid lg:grid-cols-3 gap-10">
+          <div className="mt-14 w-full grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {projetos}
           </div>
         </div>
