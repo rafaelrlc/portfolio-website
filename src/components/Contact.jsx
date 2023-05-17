@@ -2,7 +2,8 @@ import React from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { contactSchema } from "../schemas/schemas";
-
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 const Contact = () => {
   const {
     register,
@@ -13,8 +14,28 @@ const Contact = () => {
   } = useForm({
     resolver: yupResolver(contactSchema),
   });
-  const onSubmit = (data) => {
-    console.log(data);
+
+  const form = useRef();
+  const onSubmit = (e) => {
+    //console.log(data);
+    e.preventDefault();
+    console.log(form.current);
+    emailjs
+      .sendForm(
+        "service_c9244p6",
+        "template_pjk3ab5",
+        form.current,
+        "ggqI8x0FibTw_lvSw"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     reset();
   };
 
@@ -31,21 +52,37 @@ const Contact = () => {
           </p>
         </div>
         <form
+          ref={form}
           className="my-4 flex flex-col col-span-2"
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={onSubmit}
         >
+          <div className="mb-3">
+            <label className="block mb-2 text-sm font-medium text-gray-300">
+              Your Name
+            </label>
+            <input
+              className="p-3 flex w-full rounded-md focus:ring-0 focus:outline-none font-medium bg-[#141414] border border-gray-700"
+              type="text"
+              placeholder="Your Name"
+              name="user_name"
+              id="user_name"
+              required
+            />
+            <span className="text-red-600">{errors?.username?.message}</span>
+          </div>
           <div>
             <label className="block mb-2 text-sm font-medium text-gray-300">
               Your Message
             </label>
             <textarea
               id="message"
+              name="message"
               rows="4"
               className="block py-4 px-3 w-full font-medium bg-[#141414] rounded-lg border border-gray-700 focus:ring-0 focus:outline-none"
               placeholder="Write your message here.."
-              {...register("message")}
+              required
             ></textarea>
-            <span className="text-red-600">{errors?.fullname?.message}</span>
+            <span className="text-red-600">{errors?.message?.message}</span>
           </div>
           <div className="mt-3">
             <label className="block mb-2 text-sm font-medium text-gray-300">
@@ -55,14 +92,16 @@ const Contact = () => {
               className="p-3 flex w-full rounded-md focus:ring-0 focus:outline-none font-medium bg-[#141414] border border-gray-700"
               type="email"
               placeholder="Your Email"
-              {...register("email")}
+              name="user_email"
+              id="user_email"
+              required
             />
-            <span className="text-red-600">{errors?.fullname?.email}</span>
+            <span className="text-red-600">{errors?.email?.message}</span>
           </div>
           <div className="w-full flex justify-between">
             <div className="flex items-end"></div>
             <button
-              type="button"
+              type="submit"
               className="text-white bg-[#FF9119] hover:bg-[#ff9019c6] focus:ring-0 font-medium rounded-lg text-sm px-5 py-2.5 text-center  items-center mt-3"
             >
               Send
