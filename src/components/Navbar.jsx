@@ -4,7 +4,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [mobileNav, setMobileNav] = useState(true);
+  const [mobileNav, setMobileNav] = useState(false);
   const [navColor, setNavColor] = useState("text-white");
 
   // window.onscroll = function () {
@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex h-24 shadow items-center bg-transparent w-full mx-auto px-4 bg-black md:justify-end justify-start fixed`}
+      className={`flex h-24  items-center bg-transparent w-full mx-auto px-4 md:justify-end justify-start fixed z-50`}
     >
       <ul className="hidden md:flex">
         <li className="group transition-all duration-200 ease-in-out py-2 hover:cursor-pointer">
@@ -90,7 +90,7 @@ const Navbar = () => {
         onClick={() => setMobileNav(!mobileNav)}
         className="block md:hidden ml-100"
       >
-        {mobileNav && (
+        {!mobileNav && (
           <div>
             {" "}
             <AiOutlineMenu
@@ -103,7 +103,7 @@ const Navbar = () => {
 
       <div
         className={
-          !mobileNav
+          mobileNav
             ? "fixed opacity-[.90] bg-black left-0 top-0 w-[100%] h-full ease-in-out duration-500 md:hidden"
             : "fixed left-[-100%] bottom-[-100%]"
         }

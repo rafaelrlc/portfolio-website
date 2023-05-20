@@ -29,7 +29,7 @@ export const projects = [
       "https://media.discordapp.net/attachments/714891795129171983/1103869381496275055/image.png?width=756&height=579",
     title: "Portfolio Website",
     description:
-      "My portfolio website (the one you are seeing right now), here I improved my CSS skills and learned how to use TailwindCss. ",
+      "My portfolio website (the one you are seeing right now), here I improved my CSS skills and learned how to use Tailwind. ",
     url: "https://github.com/rafaelrlc/portfolio-website",
   },
   {

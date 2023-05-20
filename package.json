@@ -12,9 +12,11 @@
     "@emailjs/browser": "^3.7.0",
     "@hookform/resolvers": "^3.0.0",
     "react": "^18.2.0",
+    "react-component-typed-terminal": "^1.1.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
     "react-icons": "^4.8.0",
+    "react-terminal": "^1.3.1",
     "react-typewriter-effect": "^1.1.0",
     "yup": "^1.0.2"
   },
