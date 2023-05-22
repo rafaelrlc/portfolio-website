@@ -26,7 +26,7 @@ export const projects = [
 
   {
     image:
-      "https://media.discordapp.net/attachments/714891795129171983/1103869381496275055/image.png?width=756&height=579",
+      "https://media.discordapp.net/attachments/886688344363388958/1110224097813733376/image.png?width=1126&height=548",
     title: "Portfolio Website",
     description:
       "My portfolio website (the one you are seeing right now), here I improved my CSS skills and learned how to use Tailwind. ",
@@ -35,7 +35,7 @@ export const projects = [
   {
     title: "Andromeda",
     image:
-      "https://cdn.discordapp.com/attachments/886688344363388958/1066155147878735923/447-4477229_winter-anime-girl-icon-hd-png-download.png",
+      "https://upload.wikimedia.org/wikipedia/commons/c/c2/M31_09-01-2011_%28cropped%29.jpg",
     description:
       "A simple anime listing website using a external API, in this project I learned how to do pagination.",
     url: "https://github.com/rafaelrlc/andromeda-anime-list-website",
@@ -43,7 +43,7 @@ export const projects = [
 
   {
     image:
-      "https://cdn.discordapp.com/attachments/886688344363388958/1066155147878735923/447-4477229_winter-anime-girl-icon-hd-png-download.png",
+      "https://upload.wikimedia.org/wikipedia/commons/c/c2/M31_09-01-2011_%28cropped%29.jpg",
     title: "Andromeda 2.0",
     description: "The version 2.0 of Andromeda, now with a lot more features.",
     url: "https://github.com/rafaelrlc/Andromeda",

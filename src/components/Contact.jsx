@@ -1,7 +1,7 @@
 import React from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { contactSchema } from "../schemas/schemas";
+import { contactSchema } from "../utils/schemas/schemas";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 const Contact = () => {

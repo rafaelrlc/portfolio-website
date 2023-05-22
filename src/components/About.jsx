@@ -11,7 +11,7 @@ const About = () => {
           }
         />
         <div className="flex flex-col justify-center items-center mr-2">
-          <h1 className="text-[#ffad4a] py-4 w-full md:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
+          <h1 className=" py-4 w-full md:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-slate-100 to-orange-200">
             About me:
           </h1>
           <p className="text-gray-200 md:text-2xl text-lg">
@@ -26,39 +26,39 @@ const About = () => {
               </a>
             </span>
             . <br></br>I have experience with{" "}
-            <span className="text-[#ffad4a]  text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
               Python
             </span>
             ,{" "}
-            <span className="text-[#ffad4a]  text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
               React
             </span>
             ,{" "}
-            <span className="text-[#ffad4a]  text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
               Next.js
             </span>{" "}
             ,{" "}
-            <span className="text-[#ffad4a]  text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
               Express
             </span>
             ,{" "}
-            <span className="text-[#ffad4a]  text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
               Java
             </span>{" "}
             ,{" "}
-            <span className="text-[#ffad4a]  text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
               Spring Boot
             </span>
             ,{" "}
-            <span className="text-[#ffad4a]  text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
               SQL
             </span>
             ,{" "}
-            <span className="text-[#ffad4a]  text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
               HTML/CSS
             </span>
             , and{" "}
-            <span className="text-[#ffad4a]  text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
               {" "}
               Tailwind
             </span>
