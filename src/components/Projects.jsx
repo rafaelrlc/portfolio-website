@@ -10,6 +10,7 @@ const Projects = () => {
       title={item.title}
       description={item.description}
       url={item.url}
+      key={item.id}
     ></Card>
   ));
 

@@ -1,5 +1,6 @@
 export const projects = [
   {
+    id: 1,
     image:
       "https://cdn.discordapp.com/attachments/714891795129171983/1103870247628439652/image.png",
     title: "Social Media App",
@@ -8,6 +9,7 @@ export const projects = [
     url: "https://github.com/rafaelrlc/socialmedia-app-nextjs",
   },
   {
+    id: 2,
     image:
       "https://cdn.discordapp.com/attachments/714891795129171983/1103870247628439652/image.png",
     title: "PsicoDaily",
@@ -16,6 +18,7 @@ export const projects = [
     url: "https://github.com/rafaelrlc/Psico-Daily",
   },
   {
+    id: 3,
     image:
       "https://media.discordapp.net/attachments/714891795129171983/1092821396163403836/image.png?width=1080&height=493",
     title: "Tom Nook Market",
@@ -25,6 +28,7 @@ export const projects = [
   },
 
   {
+    id: 4,
     image:
       "https://media.discordapp.net/attachments/886688344363388958/1110224097813733376/image.png?width=1126&height=548",
     title: "Portfolio Website",
@@ -33,6 +37,7 @@ export const projects = [
     url: "https://github.com/rafaelrlc/portfolio-website",
   },
   {
+    id: 5,
     title: "Andromeda",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/c/c2/M31_09-01-2011_%28cropped%29.jpg",
@@ -42,6 +47,7 @@ export const projects = [
   },
 
   {
+    id: 6,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/c/c2/M31_09-01-2011_%28cropped%29.jpg",
     title: "Andromeda 2.0",

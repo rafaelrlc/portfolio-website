@@ -47,8 +47,7 @@ const Contact = () => {
             Contact me
           </h1>
           <p className="text-lg text-gray-500 dark:text-gray-400 text-start">
-            Want to work with me? Send me a private message and I'll get back to
-            you as soon as possible!
+            Do you have interess to work with me? Send me a message!
           </p>
         </div>
         <form
