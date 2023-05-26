@@ -30,8 +30,12 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex h-24  items-center bg-transparent w-full mx-auto px-4 md:justify-end justify-start fixed z-50`}
+      className={`flex h-24  items-center bg-transparent w-full mx-auto px-4 md:justify-between justify-between fixed z-50`}
     >
+      <img
+        src="https://media.discordapp.net/attachments/1025173249543393330/1111468125666426921/r-high-resolution-logo-color-on-transparent-background.png?width=1482&height=1138"
+        width={"60px"}
+      />
       <ul className="hidden md:flex">
         <li className="group transition-all duration-200 ease-in-out py-2 hover:cursor-pointer">
           <a
