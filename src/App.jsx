@@ -13,6 +13,12 @@ import {
   troll_background,
 } from "./utils/particles-config";
 
+import { AiFillGithub } from "react-icons/ai";
+import { FaGitAlt, FaLinkedinIn } from "react-icons/fa";
+import { RiDownloadCloud2Line } from "react-icons/ri";
+
+import Tooltip from "@mui/material/Tooltip";
+
 const App = () => {
   const [backgroundConfig, setBackgroundConfig] = useState(
     particles_config_normal
@@ -39,6 +45,12 @@ const App = () => {
           ? particles_config_normal
           : particles_config_among
       );
+    } else if (config == "logo") {
+      setBackgroundConfig((prevConfig) =>
+        prevConfig === particles_config_logo
+          ? particles_config_normal
+          : particles_config_logo
+      );
     }
   };
 
@@ -52,13 +64,39 @@ const App = () => {
         options={backgroundConfig}
       />
       <div>
-        {/* <button className="bg-red-500" onClick={() => changeBackground("troll")}>
-          button
-        </button> */}
-        <Navbar />
+        <ul className="flex items-center gap-3 fixed bottom-10 left-10">
+          <Tooltip title="Linkedin">
+            <a
+              className="bg-gray-600 hover:bg-gray-800 p-2 rounded-3xl text-white"
+              target="_blank"
+              href="https://linkedin.com/in/rafaelribeirolc"
+            >
+              <FaLinkedinIn className="text-2xl sm:text-xl" />
+            </a>
+          </Tooltip>
+          <Tooltip title="Github">
+            <a
+              className="bg-gray-600 hover:bg-gray-800 p-2 rounded-3xl text-white"
+              href="https://www.github.com/rafaelrlc"
+              target="_blank"
+            >
+              <AiFillGithub className="text-2xl sm:text-xl" />
+            </a>
+          </Tooltip>
+          <Tooltip title="Download Resume">
+            <a className="bg-gray-600 hover:bg-gray-800 p-2 rounded-3xl text-white">
+              <RiDownloadCloud2Line
+                className="text-2xl sm:text-xl"
+                target="_blank"
+              />
+            </a>
+          </Tooltip>
+        </ul>
+
+        <Navbar changeBackground={changeBackground} />
         <Hero changeBackground={changeBackground} />
-        <About />
         <Projects />
+        <About />
         <Contact />
         <Footer />
       </div>

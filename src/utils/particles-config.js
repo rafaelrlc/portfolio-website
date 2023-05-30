@@ -1165,7 +1165,7 @@ export const particles_config_among = {
         type: "images",
         options: {
           images: {
-            src: "https://particles.js.org/images/cyan_amongus.png",
+            src: "https://cdn140.picsart.com/338602547027211.png?to=crop&type=webp&r=1456x1869&q=85",
             width: 500,
             height: 634,
           },
@@ -1900,3 +1900,5 @@ export const troll_background = {
   zLayers: 100,
   emitters: [],
 };
+
+// export const particles_config_logo =

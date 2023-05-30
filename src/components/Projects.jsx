@@ -18,7 +18,7 @@ const Projects = () => {
     <div className="flex flex-col items-center justify-center">
       <div
         id="projects"
-        className="items-center justify-center mt-16 px-8 max-w-[1340px]"
+        className="items-center justify-center mt-16 px-8 max-w-[1540px]"
       >
         {" "}
         <div className="py-16 mx-auto flex items-start justify-center flex-col h-full">

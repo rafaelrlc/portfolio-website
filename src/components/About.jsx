@@ -2,7 +2,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="flex flex-col items-center justify-center mx-7">
+    <div
+      id="about"
+      className="flex flex-col items-center justify-center mx-7 py-16"
+    >
       <div className="max-w-[1360px] flex lg:flex-row flex-col items-center gap-10 lg:text-start text-center">
         <img
           className="w-[500px] mx-auto my-4"

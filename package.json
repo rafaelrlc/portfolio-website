@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@hookform/resolvers": "^3.0.0",
+    "@mui/material": "^5.13.2",
+    "rc-tooltip": "^6.0.1",
     "react": "^18.2.0",
     "react-component-typed-terminal": "^1.1.0",
     "react-dom": "^18.2.0",

@@ -16,15 +16,14 @@ const Hero = (props) => {
                 onClick={() => props.changeBackground("among")}
               >
                 <span className="hidden md:inline">HI, MY NAME IS</span>{" "}
-                <span className="hover:text-[#44FFF7]  bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
+                <span className="hover:text-[#e9e9e9]  bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
                   RAFAEL RIBEIRO
                 </span>
               </h1>
               <h1 className="sm:text-5xl lg:text-6xl text-4xl font-extrabold text-transparent text-[#FF9119] mt-1  bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
                 SOFTWARE DEVELOPER
               </h1>
-            </div>
-
+            </div>{" "}
             <h2
               className="text-3xl  text-gray-400 font-bold"
               onClick={() => props.changeBackground("troll")}
@@ -45,7 +44,7 @@ const Hero = (props) => {
                   "Spring Boot",
                 ]}
                 multiTextDelay={1000}
-                typeSpeed={60}
+                typeSpeed={50}
                 multiTextLoop={true}
               />
             </h2>
@@ -59,20 +58,7 @@ const Hero = (props) => {
             width: 600,
             maxWidth: "100vw",
           }}
-        >
-          {/* <ReactTerminal
-            themes={{
-              "my-custom-theme": {
-                themeBGColor: "#101111",
-                themeToolbarColor: "#101111",
-                themeColor: "#ffffff",
-                themePromptColor: "#ffffff",
-              },
-            }}
-            theme="my-custom-theme"
-            prompt={">>> Hi."}
-          /> */}
-        </div>
+        ></div>
       </div>
     </div>
   );

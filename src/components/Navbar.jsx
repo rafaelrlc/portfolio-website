@@ -3,7 +3,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [mobileNav, setMobileNav] = useState(false);
   const [navColor, setNavColor] = useState("text-white");
 
@@ -29,10 +29,11 @@ const Navbar = () => {
   // }
 
   return (
-    <div
+    <nav
       className={`flex h-24  items-center bg-transparent w-full mx-auto px-4 md:justify-between justify-between fixed z-50`}
     >
       <img
+        onClick={() => props.changeBackground("logo")}
         src="https://media.discordapp.net/attachments/1025173249543393330/1111468125666426921/r-high-resolution-logo-color-on-transparent-background.png?width=1482&height=1138"
         width={"60px"}
       />
@@ -90,6 +91,7 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
+
       <div
         onClick={() => setMobileNav(!mobileNav)}
         className="block md:hidden ml-100"
@@ -139,7 +141,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
