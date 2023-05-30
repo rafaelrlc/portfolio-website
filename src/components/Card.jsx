@@ -6,7 +6,11 @@ const Card = (props) => {
 
   return (
     <div className="md:max-w-md flex flex-col shadow-lg rounded-lg bg-[#1b1b1c]">
-      <a className="flex-shrink-0 relative rounded-lg" target="_blank">
+      <a
+        className="flex-shrink-0 relative rounded-lg"
+        target="_blank"
+        href={props.url}
+      >
         <img
           className="h-64 sm:h-80 max-h-96 w-full object-cover rounded-t-lg hover:cursor-pointer"
           src={props.image}
