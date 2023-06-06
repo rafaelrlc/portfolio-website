@@ -1,12 +1,14 @@
 import React, { useCallback, useState } from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import {
   particles_config_among,
   particles_config_normal,
@@ -14,10 +16,8 @@ import {
 } from "./utils/particles-config";
 
 import { AiFillGithub } from "react-icons/ai";
-import { FaGitAlt, FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { RiDownloadCloud2Line } from "react-icons/ri";
-
-import Tooltip from "@mui/material/Tooltip";
 
 const App = () => {
   const [backgroundConfig, setBackgroundConfig] = useState(
@@ -64,33 +64,34 @@ const App = () => {
         options={backgroundConfig}
       />
       <div>
-        <ul className="flex items-center gap-3 fixed bottom-10 left-10">
-          <Tooltip title="Linkedin">
-            <a
-              className="bg-gray-600 hover:bg-gray-800 p-2 rounded-3xl text-white"
+        <ul className="flex items-center gap-3 fixed bottom-10 left-10 z-[99]">
+          <a
+            className="bg-gray-700 hover:bg-gray-800 p-2 rounded-3xl text-white tooltip "
+            data-tip="Linkedin"
+            target="_blank"
+            href="https://linkedin.com/in/rafaelribeirolc"
+          >
+            <FaLinkedinIn className="text-xl sm:text-2xl" />
+          </a>
+
+          <a
+            className="bg-gray-700 hover:bg-gray-800 p-2 rounded-3xl text-white tooltip"
+            data-tip="Github"
+            href="https://www.github.com/rafaelrlc"
+            target="_blank"
+          >
+            <AiFillGithub className="text-xl sm:text-2xl" />
+          </a>
+
+          <a
+            className="bg-gray-700 hover:bg-gray-800 p-2 rounded-3xl text-white tooltip"
+            data-tip="Download Resume"
+          >
+            <RiDownloadCloud2Line
+              className="text-xl sm:text-2xl"
               target="_blank"
-              href="https://linkedin.com/in/rafaelribeirolc"
-            >
-              <FaLinkedinIn className="text-2xl sm:text-xl" />
-            </a>
-          </Tooltip>
-          <Tooltip title="Github">
-            <a
-              className="bg-gray-600 hover:bg-gray-800 p-2 rounded-3xl text-white"
-              href="https://www.github.com/rafaelrlc"
-              target="_blank"
-            >
-              <AiFillGithub className="text-2xl sm:text-xl" />
-            </a>
-          </Tooltip>
-          <Tooltip title="Download Resume">
-            <a className="bg-gray-600 hover:bg-gray-800 p-2 rounded-3xl text-white">
-              <RiDownloadCloud2Line
-                className="text-2xl sm:text-xl"
-                target="_blank"
-              />
-            </a>
-          </Tooltip>
+            />
+          </a>
         </ul>
 
         <Navbar changeBackground={changeBackground} />

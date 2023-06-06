@@ -26,25 +26,23 @@ const Card = (props) => {
         <span className="absolute top-2 right-2">
           <RiShareBoxFill color="gray" size={22} />
         </span>
-        <div
-          className={`p-7 ${
-            change ? "block" : "relative"
-          } ease-linear transition-all duration-150 bg-[#1b1b1c] bottom-16 rounded-b-lg hover:cursor-pointer`}
-          onClick={() => setChange(!change)}
-        >
-          <div className="flex items-center flex-col text-center">
-            <h5
-              className="mb-2 text-2xl font-bold tracking-tight text-white hover:cursor-pointer"
-              onClick={() => console.log("iooioioi")}
-            >
-              {props.title}
-            </h5>
-            <p className="mb-3 font-normal text-gray-400">
-              {props.description}
-            </p>
-          </div>
-        </div>
       </a>
+      <div
+        className={`p-7 ${
+          change ? "block" : "relative"
+        } ease-linear transition-all duration-150 bg-[#1b1b1c] bottom-16 rounded-b-lg hover:cursor-pointer`}
+        onClick={() => setChange(!change)}
+      >
+        <div className="flex items-center flex-col text-center">
+          <h5
+            className="mb-2 text-2xl font-bold tracking-tight text-white hover:cursor-pointer"
+            onClick={() => console.log("iooioioi")}
+          >
+            {props.title}
+          </h5>
+          <p className="mb-3 font-normal text-gray-400">{props.description}</p>
+        </div>
+      </div>
     </div>
   );
 };
