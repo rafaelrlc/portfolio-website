@@ -92,13 +92,16 @@ const App = () => {
               target="_blank"
             />
           </a>
-        </ul>{" "}
-        <Navbar changeBackground={changeBackground} />
-        <Hero changeBackground={changeBackground} />
-        <Projects />
-        <About />
-        <Contact />
-        <Footer />
+        </ul>
+
+        <div className="relative">
+          <Navbar changeBackground={changeBackground} />
+          <Hero changeBackground={changeBackground} />
+          <Projects />
+          <About />
+          <Contact />
+          <Footer />
+        </div>
       </div>
     </div>
   );

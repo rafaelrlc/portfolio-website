@@ -5,7 +5,7 @@ const Card = (props) => {
   const [change, setChange] = useState(true);
 
   return (
-    <div className="md:max-w-md flex flex-col shadow-lg rounded-lg bg-[#1b1b1c] relative">
+    <div className="md:max-w-md flex flex-col shadow-lg rounded-lg bg-[#1b1b1c]">
       <a
         className="flex-shrink-0 relative rounded-lg"
         target="_blank"

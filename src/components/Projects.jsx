@@ -15,7 +15,7 @@ const Projects = () => {
   ));
 
   return (
-    <div className="flex flex-col items-center justify-center relative">
+    <div className="flex flex-col items-center justify-center">
       <div
         id="projects"
         className="items-center justify-center mt-16 px-8 max-w-[1540px]"

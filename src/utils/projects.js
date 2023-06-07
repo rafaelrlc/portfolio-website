@@ -14,7 +14,7 @@ export const projects = [
       "https://media.discordapp.net/attachments/1025173249543393330/1115799295094956122/image.png?width=786&height=480",
     title: "PsicoDaily",
     description:
-      "A website to help the communication between the patient. This fullstack project, the backend was made in Express and MongoDB and deployed with Railwind.",
+      "A website to help the communication between the patient. This fullstack project, the frontend was made in Next.js and Tailwind and the backend in Express and MongoDB and deployed with Railwind.",
     url: "https://github.com/rafaelrlc/Psico-Daily",
   },
   {
