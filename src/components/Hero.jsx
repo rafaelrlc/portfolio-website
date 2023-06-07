@@ -3,7 +3,10 @@ import TypeWriterEffect from "react-typewriter-effect";
 
 const Hero = (props) => {
   return (
-    <div className="flex md:flex-row items-center justify-around md:mx-10 mx-7 h-screen gap-5 relative">
+    <div
+      id="#home"
+      className="flex md:flex-row items-center justify-around md:mx-10 mx-7 h-screen gap-5 relative"
+    >
       <div>
         <div className="group transition-all duration-300 ease-in-out py-2 hover:cursor-pointer flex flex-col md:items-start items-center gap-3">
           <div className="flex lg:flex-col flex-col-reverse md:items-start items-center">
