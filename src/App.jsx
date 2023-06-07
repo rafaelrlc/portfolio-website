@@ -57,7 +57,7 @@ const App = () => {
   return (
     <div>
       <Particles
-        className="z-[-1] fixed"
+        className="fixed"
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
@@ -92,8 +92,7 @@ const App = () => {
               target="_blank"
             />
           </a>
-        </ul>
-
+        </ul>{" "}
         <Navbar changeBackground={changeBackground} />
         <Hero changeBackground={changeBackground} />
         <Projects />

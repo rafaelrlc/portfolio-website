@@ -4,7 +4,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 const Footer = () => {
   return (
-    <footer className="bg-[#151515] p-5 w-full">
+    <footer className="bg-[#151515] p-5 w-full relative">
       <div className="w-full max-w-screen-xl mx-auto sm:py-8 py-2">
         <div className="flex justify-center items-center gap-2 sm:flex-row sm:justify-between flex-col-reverse">
           <div className="flex flex-row justify-center items-center gap-3 h-full text-gray-400">

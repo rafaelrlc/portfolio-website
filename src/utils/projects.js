@@ -11,10 +11,10 @@ export const projects = [
   {
     id: 2,
     image:
-      "https://cdn.discordapp.com/attachments/714891795129171983/1103870247628439652/image.png",
+      "https://media.discordapp.net/attachments/1025173249543393330/1115799295094956122/image.png?width=786&height=480",
     title: "PsicoDaily",
     description:
-      "A website to help the communication between the psychologistetween the psychologistetween the psychologist and the patient, this fullstack project. The backend was made in Express and MongoDB.",
+      "A website to help the communication between the patient. This fullstack project, the backend was made in Express and MongoDB and deployed with Railwind.",
     url: "https://github.com/rafaelrlc/Psico-Daily",
   },
   {

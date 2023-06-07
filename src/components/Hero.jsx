@@ -3,16 +3,16 @@ import TypeWriterEffect from "react-typewriter-effect";
 
 const Hero = (props) => {
   return (
-    <div className="flex md:flex-row items-center justify-around md:mx-10 mx-7 h-screen gap-5">
+    <div className="flex md:flex-row items-center justify-around md:mx-10 mx-7 h-screen gap-5 relative">
       <div>
         <div className="group transition-all duration-300 ease-in-out py-2 hover:cursor-pointer flex flex-col md:items-start items-center gap-3">
-          <div className="flex lg:flex-col flex-col-reverse ">
+          <div className="flex lg:flex-col flex-col-reverse md:items-start items-center">
             <h1
-              className="sm:text-6xl text-5xl leading-none font-bold bg-left-bottom"
+              className="sm:text-6xl text-5xl leading-none font-bold bg-left-bottom text-gray-200 hover:text-[#b6dd9d]"
               onClick={() => props.changeBackground("among")}
             >
               <span className="hidden md:inline">HI, MY NAME IS</span>{" "}
-              <span className="hover:text-[#e9e9e9]  bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
+              <span className=" bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
                 RAFAEL RIBEIRO
               </span>
             </h1>
@@ -46,7 +46,7 @@ const Hero = (props) => {
           </h2>
         </div>
       </div>
-      <div className="mockup-code w-[330px] hidden md:block bg-[#1c1c1c]">
+      <div className="mockup-code w-[350px] hidden md:block bg-[#100f0f]">
         <pre data-prefix="$">
           <code>My Skills</code>
         </pre>
