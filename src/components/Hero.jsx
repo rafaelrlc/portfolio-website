@@ -4,7 +4,7 @@ import TypeWriterEffect from "react-typewriter-effect";
 const Hero = (props) => {
   return (
     <div
-      id="#home"
+      id="home"
       className="flex md:flex-row items-center justify-around md:mx-10 mx-7 h-screen gap-5"
     >
       <div>
