@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
 import { useState } from "react";
@@ -6,6 +6,7 @@ import { useState } from "react";
 const Navbar = (props) => {
   const [mobileNav, setMobileNav] = useState(false);
   const [navColor, setNavColor] = useState("text-white");
+  const [logo, setLogo] = useState(false);
 
   // window.onscroll = function () {
   //   scrollFunction();
@@ -30,10 +31,14 @@ const Navbar = (props) => {
 
   return (
     <nav
-      className={`flex h-24  items-center bg-transparent w-full mx-auto px-4 md:justify-between justify-between fixed z-50`}
+      className={`flex h-24  items-center bg-transparent w-full mx-auto px-4 md:justify-between justify-between fixed z-50 ease-linear transition-all duration-200`}
     >
       <img
-        src="https://media.discordapp.net/attachments/1025173249543393330/1111468125666426921/r-high-resolution-logo-color-on-transparent-background.png?width=1482&height=1138"
+        src={
+          props.theme == "dark"
+            ? "https://media.discordapp.net/attachments/1025173249543393330/1117543891495825508/r-high-resolution-logo-color-on-transparent-background_1.png?width=1030&height=650"
+            : "https://media.discordapp.net/attachments/1025173249543393330/1117541714954043443/r-high-resolution-logo-color-on-transparent-background_1.png?width=1030&height=650"
+        }
         width={"60px"}
       />
       <ul className="hidden md:flex">
@@ -44,7 +49,7 @@ const Navbar = (props) => {
           >
             {" "}
             <span
-              className={`${navColor} bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               Home
             </span>
@@ -57,7 +62,7 @@ const Navbar = (props) => {
           >
             {" "}
             <span
-              className={`${navColor} bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               About
             </span>
@@ -70,7 +75,7 @@ const Navbar = (props) => {
           >
             {" "}
             <span
-              className={`${navColor} bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               Projects
             </span>
@@ -83,7 +88,7 @@ const Navbar = (props) => {
           >
             {" "}
             <span
-              className={`${navColor} bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               Contact
             </span>
@@ -100,7 +105,7 @@ const Navbar = (props) => {
             {" "}
             <AiOutlineMenu
               size={20}
-              className="hover:cursor-pointer text-white"
+              className="hover:cursor-pointer dark:text-white text-black"
             ></AiOutlineMenu>
           </div>
         )}
@@ -113,7 +118,7 @@ const Navbar = (props) => {
             : "fixed left-[-100%] bottom-[-100%]"
         }
       >
-        <div className="flex items-center justify-center m-4 text-white fixed">
+        <div className="flex items-center justify-center m-4 dark:text-white text-white fixed">
           <MdOutlineClose
             className="text-2xl hover:cursor-pointer"
             onClick={() => setMobileNav(!mobileNav)}
@@ -121,11 +126,11 @@ const Navbar = (props) => {
         </div>
 
         <ul
-          className="pt-4 flex flex-col items-center gap-10 justify-center h-full mb-120 text-white"
+          className="pt-4 flex flex-col items-center gap-10 justify-center h-full mb-120 dark:text-white text-black"
           onClick={() => setMobileNav(!mobileNav)}
         >
           <li
-            className={`p-4 hover:cursor-pointer hover:text-gray-400 ${navColor}`}
+            className={`p-4 hover:cursor-pointer hover:text-gray-400 dark:text-white text-black`}
           >
             <a href="#home">HOME</a>
           </li>

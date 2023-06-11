@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -9,20 +9,33 @@ import Footer from "./components/Footer";
 
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import {
-  particles_config_among,
-  particles_config_normal,
-  troll_background,
-} from "./utils/particles-config";
+import { particles_hash } from "./utils/particles-config";
 
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { RiDownloadCloud2Line } from "react-icons/ri";
 
+import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
+
 const App = () => {
-  const [backgroundConfig, setBackgroundConfig] = useState(
-    particles_config_normal
-  );
+  const [theme, setTheme] = useState(null);
+  const [backgroundConfig, setBackgroundConfig] = useState("normal_dark2");
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
 
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
@@ -30,43 +43,40 @@ const App = () => {
 
   const particlesLoaded = useCallback(async (container) => {}, []);
 
-  const changeBackground = (config) => {
-    if (config === "troll") {
-      setBackgroundConfig((prevConfig) =>
-        prevConfig === troll_background
-          ? particles_config_normal
-          : troll_background
-      );
-    } else if (config === "normal") {
-      setBackgroundConfig(particles_config_normal);
-    } else if (config === "among") {
-      setBackgroundConfig((prevConfig) =>
-        prevConfig === particles_config_among
-          ? particles_config_normal
-          : particles_config_among
-      );
-    } else if (config == "logo") {
-      setBackgroundConfig((prevConfig) =>
-        prevConfig === particles_config_logo
-          ? particles_config_normal
-          : particles_config_logo
-      );
-    }
+  // const changeBackground = (config) => {
+  //   if (config === "normal") {
+  //     setBackgroundConfig("normal_dark");
+  //   } else if (config === "among") {
+  //     setBackgroundConfig((prevConfig) =>
+  //       prevConfig === "among" ? "normal_dark" : "among"
+  //     );
+  //   }
+  // };
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
-    <div>
+    <div className="dark:bg-black bg-[#f5f5f5] ease-linear transition-all duration-200">
       <Particles
         className="fixed"
-        id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
-        options={backgroundConfig}
+        options={particles_hash[backgroundConfig]}
       />
+
+      <button
+        type="button"
+        onClick={handleThemeSwitch}
+        className="fixed z-10 right-10 bottom-10 dark:bg-white bg-gray-600 text-lg p-2 rounded-3xl dark:text-black text-white"
+      >
+        {theme === "dark" ? <MdOutlineDarkMode /> : <MdDarkMode />}
+      </button>
       <div>
         <ul className="flex items-center gap-3 fixed bottom-10 left-10 z-[99]">
           <a
-            className="bg-gray-700 hover:bg-gray-800 p-2 rounded-3xl text-white tooltip "
+            className="dark:bg-gray-700 bg-gray-500  hover:bg-gray-800 p-2 rounded-3xl text-white tooltip "
             data-tip="Linkedin"
             target="_blank"
             href="https://linkedin.com/in/rafaelribeirolc"
@@ -75,7 +85,7 @@ const App = () => {
           </a>
 
           <a
-            className="bg-gray-700 hover:bg-gray-800 p-2 rounded-3xl text-white tooltip"
+            className="dark:bg-gray-700 bg-gray-500 hover:bg-gray-800 p-2 rounded-3xl text-white tooltip"
             data-tip="Github"
             href="https://www.github.com/rafaelrlc"
             target="_blank"
@@ -84,7 +94,7 @@ const App = () => {
           </a>
 
           <a
-            className="bg-gray-700 hover:bg-gray-800 p-2 rounded-3xl text-white tooltip"
+            className="dark:bg-gray-700 bg-gray-500  hover:bg-gray-800 p-2 rounded-3xl text-white tooltip"
             data-tip="Download Resume"
           >
             <RiDownloadCloud2Line
@@ -95,10 +105,10 @@ const App = () => {
         </ul>
 
         <div className="relative">
-          <Navbar changeBackground={changeBackground} />
-          <Hero changeBackground={changeBackground} />
-          <Projects />
+          <Navbar theme={theme} />
+          <Hero />
           <About />
+          <Projects />
           <Contact />
           <Footer />
         </div>

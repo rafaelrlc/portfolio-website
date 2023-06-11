@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex flex-col items-center justify-center mx-7 py-16"
+      className="flex flex-col items-center justify-center mx-7 ease-linear transition-all duration-200"
     >
       <div className="max-w-[1360px] flex lg:flex-row flex-col items-center gap-10 lg:text-start text-center">
         <img
@@ -17,9 +17,9 @@ const About = () => {
           <h1 className=" py-4 w-full md:text-3xl text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-slate-100 to-orange-200">
             About me:
           </h1>
-          <p className="text-gray-200 md:text-2xl text-lg">
+          <p className="dark:text-gray-200 text-gray-800 md:text-2xl text-lg">
             My name is Rafael Ribeiro, I'm 19 years old{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-500 to-gray-200">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r dark:from-gray-300 dark:via-gray-500 dark:to-gray-200 from-gray-800 via-gray-500 to-gray-400">
               Computer Science{" "}
             </span>{" "}
             student at the Federal University of Alagoas{" "}

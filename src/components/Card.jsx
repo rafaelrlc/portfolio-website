@@ -5,9 +5,9 @@ const Card = (props) => {
   const [change, setChange] = useState(true);
 
   return (
-    <div className="md:max-w-md flex flex-col shadow-lg rounded-lg bg-[#1b1b1c]">
+    <div className="md:max-w-md flex flex-col dark:shadow-lg  rounded-lg dark:bg-[#1b1b1c] bg-[#eeeeee] ease-linear transition-all duration-250">
       <a
-        className="flex-shrink-0 relative rounded-lg"
+        className="flex-shrink-0 relative rounded-lg "
         target="_blank"
         href={props.url}
       >
@@ -30,17 +30,19 @@ const Card = (props) => {
       <div
         className={`p-7 ${
           change ? "block" : "relative"
-        } ease-linear transition-all duration-150 bg-[#1b1b1c] bottom-16 rounded-b-lg hover:cursor-pointer`}
+        } ease-linear transition-all duration-250 dark:bg-[#1b1b1c] bg-[#eeeeee] bottom-16 rounded-b-lg hover:cursor-pointer`}
         onClick={() => setChange(!change)}
       >
         <div className="flex items-center flex-col text-center">
           <h5
-            className="mb-2 text-2xl font-bold tracking-tight text-white hover:cursor-pointer"
+            className="mb-2 text-2xl font-bold tracking-tight dark:text-white text-gray-800 hover:cursor-pointer"
             onClick={() => console.log("iooioioi")}
           >
             {props.title}
           </h5>
-          <p className="mb-3 font-normal text-gray-400">{props.description}</p>
+          <p className="mb-3 font-normal dark:text-gray-400 text-black">
+            {props.description}
+          </p>
         </div>
       </div>
     </div>

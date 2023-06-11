@@ -41,12 +41,12 @@ const Contact = () => {
 
   return (
     <div id="contact" className="flex items-center justify-center">
-      <div className="max-w-[1340px] h-full grid lg:grid-cols-3 items-center md:gap-5 gap-0 text-white mb-5 mx-8">
+      <div className="max-w-[1340px] h-full grid lg:grid-cols-3 items-center md:gap-5 gap-0 dark:text-white text-black mb-5 mx-8">
         <div className=" space-y-5 sm:space-y-4 mb-14">
           <h1 className="lg:text-3xl font-bold tracking-tight sm:text-4xl text-2xl text-black dark:text-white text-start">
             Contact me
           </h1>
-          <p className="text-lg text-gray-500 dark:text-gray-400 text-start">
+          <p className="text-lg text-gray-700 dark:text-gray-400 text-start">
             Do you have interess to work with me? Send me a message!
           </p>
         </div>
@@ -56,11 +56,11 @@ const Contact = () => {
           onSubmit={onSubmit}
         >
           <div className="mb-3">
-            <label className="block mb-2 text-sm font-medium text-gray-300">
+            <label className="block mb-2 text-sm font-medium dark:text-gray-300 text-gray-800">
               Your Name
             </label>
             <input
-              className="p-3 flex w-full rounded-md focus:ring-0 focus:outline-none font-medium bg-[#141414] border border-gray-700"
+              className="p-3 flex w-full rounded-md focus:ring-0 focus:outline-none font-medium dark: dark:bg-[#141414] bg-gray-50 border dark:border-gray-700 border-[#d9d8d8]"
               type="text"
               placeholder="Your Name"
               name="user_name"
@@ -70,25 +70,25 @@ const Contact = () => {
             <span className="text-red-600">{errors?.username?.message}</span>
           </div>
           <div>
-            <label className="block mb-2 text-sm font-medium text-gray-300">
+            <label className="block mb-2 text-sm font-medium dark:text-gray-300 text-gray-800">
               Your Message
             </label>
             <textarea
               id="message"
               name="message"
               rows="4"
-              className="block py-4 px-3 w-full font-medium bg-[#141414] rounded-lg border border-gray-700 focus:ring-0 focus:outline-none"
+              className="block py-4 px-3 w-full font-medium dark:bg-[#141414] bg-gray-50 rounded-lg focus:ring-0 focus:outline-none border dark:border-gray-700 border-[#d9d8d8] "
               placeholder="Write your message here.."
               required
             ></textarea>
             <span className="text-red-600">{errors?.message?.message}</span>
           </div>
           <div className="mt-3">
-            <label className="block mb-2 text-sm font-medium text-gray-300">
+            <label className="block mb-2 text-sm font-medium dark:text-gray-300 text-gray-800">
               Your Email
             </label>
             <input
-              className="p-3 flex w-full rounded-md focus:ring-0 focus:outline-none font-medium bg-[#141414] border border-gray-700"
+              className="p-3 flex w-full rounded-md focus:ring-0 focus:outline-none font-medium dark:bg-[#141414] bg-gray-50 border dark:border-gray-700 border-[#d9d8d8]"
               type="email"
               placeholder="Your Email"
               name="user_email"

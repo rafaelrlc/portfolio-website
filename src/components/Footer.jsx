@@ -4,14 +4,14 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 const Footer = () => {
   return (
-    <footer className="bg-[#151515] p-5 w-full">
+    <footer className="dark:bg-[#151515] bg-gray-100 p-5 w-full ease-linear transition-all duration-200">
       <div className="w-full max-w-screen-xl mx-auto sm:py-8 py-2">
-        <div className="flex justify-center items-center gap-2 sm:flex-row sm:justify-between flex-col-reverse">
-          <div className="flex flex-row justify-center items-center gap-3 h-full text-gray-400">
+        <div className="flex justify-center items-center dark:text-gray-400 text-gray-600 gap-2 sm:flex-row sm:justify-between flex-col-reverse">
+          <div className="flex flex-row justify-center items-center gap-3 h-full ">
             <MdOutlineEmail className="mt-[0.15rem]" />
             <h3>rafaelribeirolcc@gmail.com</h3>
           </div>
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-400 hover:cursor-pointer">
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 hover:cursor-pointer">
             <li className="flex items-center gap-2">
               <AiFillGithub className="text-2xl sm:text-xl" />
               <a

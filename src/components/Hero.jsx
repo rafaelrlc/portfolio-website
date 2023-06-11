@@ -5,31 +5,24 @@ const Hero = (props) => {
   return (
     <div
       id="home"
-      className="flex md:flex-row items-center justify-around md:mx-10 mx-7 h-screen gap-5"
+      className="flex md:flex-row items-center justify-around md:mx-10 mx-7 h-screen gap-5 "
     >
       <div>
-        <div className="group transition-all duration-300 ease-in-out py-2 hover:cursor-pointer flex flex-col md:items-start items-center gap-3">
+        <div className="group ease-linear transition-all duration-200 py-2 hover:cursor-pointer flex flex-col md:items-start items-center gap-3">
           <div className="flex lg:flex-col flex-col-reverse md:items-start items-center">
-            <h1
-              className="sm:text-6xl text-5xl leading-none font-bold bg-left-bottom text-gray-200 hover:text-[#b6dd9d]"
-              onClick={() => props.changeBackground("among")}
-            >
+            <h1 className="sm:text-6xl text-4xl leading-none font-bold bg-left-bottom dark:text-gray-200 text-gray-700 hover:text-[#b6dd9d]">
               <span className="hidden md:inline">HI, MY NAME IS</span>{" "}
               <span className=" bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
                 RAFAEL RIBEIRO
               </span>
             </h1>
-            <h1 className="sm:text-5xl lg:text-6xl text-4xl font-extrabold text-transparent text-[#FF9119] mt-1  bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
+            <h1 className="sm:text-5xl lg:text-6xl text-3xl font-extrabold text-transparent text-[#FF9119] mt-1  bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
               SOFTWARE DEVELOPER
             </h1>
           </div>{" "}
-          <h2
-            className="text-3xl  text-gray-400 font-bold"
-            onClick={() => props.changeBackground("troll")}
-          >
+          <h2 className="text-3xl text-gray-500 font-bold">
             <TypeWriterEffect
               textStyle={{
-                color: "#9795a8",
                 fontWeight: 500,
               }}
               startDelay={1000}
@@ -49,8 +42,8 @@ const Hero = (props) => {
           </h2>
         </div>
       </div>
-      <div className="mockup-code w-[350px] hidden md:block bg-[#100f0f]">
-        <pre data-prefix="$">
+      <div className="mockup-code w-[350px] hidden md:block dark:bg-[#100f0f] bg-[#f9f9f9] shadow-sm ease-linear transition-all duration-200">
+        <pre data-prefix="$" className="text-gray-700 dark:text-gray-400">
           <code>My Skills</code>
         </pre>
         <pre data-prefix=">" className="text-error">
