@@ -104,7 +104,7 @@ const App = () => {
           </a>
         </ul>
 
-        <div className="relative">
+        <div>
           <Navbar theme={theme} />
           <Hero />
           <About />

@@ -1,7 +1,7 @@
 import React from "react";
 import TypeWriterEffect from "react-typewriter-effect";
 
-const Hero = (props) => {
+const Hero = () => {
   return (
     <div
       id="home"

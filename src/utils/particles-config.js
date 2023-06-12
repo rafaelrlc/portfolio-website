@@ -554,7 +554,7 @@ export const particles_hash = {
         value: 80,
         density: {
           enable: true,
-          value_area: 800,
+          value_area: 1000,
         },
       },
       color: {
