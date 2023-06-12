@@ -39,7 +39,7 @@ const Navbar = (props) => {
             ? "https://media.discordapp.net/attachments/1025173249543393330/1117543891495825508/r-high-resolution-logo-color-on-transparent-background_1.png?width=1030&height=650"
             : "https://media.discordapp.net/attachments/1025173249543393330/1117541714954043443/r-high-resolution-logo-color-on-transparent-background_1.png?width=1030&height=650"
         }
-        width={"60px"}
+        width={"50px"}
       />
       <ul className="hidden md:flex">
         <li className="group transition-all duration-200 ease-in-out py-2 hover:cursor-pointer">
@@ -114,11 +114,11 @@ const Navbar = (props) => {
       <div
         className={
           mobileNav
-            ? "fixed opacity-[.90] bg-black left-0 top-0 w-[100%] h-full ease-in-out duration-500 md:hidden"
+            ? "fixed opacity-[.90] dark:bg-black bg-gray-200 left-0 top-0 w-[100%] h-full ease-in-out duration-500 md:hidden"
             : "fixed left-[-100%] bottom-[-100%]"
         }
       >
-        <div className="flex items-center justify-center m-4 dark:text-white text-white fixed">
+        <div className="flex items-center justify-center m-4 dark:text-white text-black fixed">
           <MdOutlineClose
             className="text-2xl hover:cursor-pointer"
             onClick={() => setMobileNav(!mobileNav)}

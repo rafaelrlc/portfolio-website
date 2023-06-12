@@ -10,7 +10,7 @@ const Hero = (props) => {
       <div>
         <div className="group ease-linear transition-all duration-200 py-2 hover:cursor-pointer flex flex-col md:items-start items-center gap-3">
           <div className="flex lg:flex-col flex-col-reverse md:items-start items-center">
-            <h1 className="sm:text-6xl text-4xl leading-none font-bold bg-left-bottom dark:text-gray-200 text-gray-700 hover:text-[#b6dd9d]">
+            <h1 className="sm:text-6xl text-4xl leading-none font-bold bg-left-bottom dark:text-gray-200 text-gray-700">
               <span className="hidden md:inline">HI, MY NAME IS</span>{" "}
               <span className=" bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
                 RAFAEL RIBEIRO
