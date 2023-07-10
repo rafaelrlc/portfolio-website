@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
 import { useState } from "react";
@@ -7,27 +7,6 @@ const Navbar = (props) => {
   const [mobileNav, setMobileNav] = useState(false);
   const [navColor, setNavColor] = useState("text-white");
   const [logo, setLogo] = useState(false);
-
-  // window.onscroll = function () {
-  //   scrollFunction();
-  // };
-
-  // function scrollFunction() {
-  //   if (
-  //     (document.body.scrollTop > 650 && document.body.scrollTop < 1300) ||
-  //     (document.documentElement.scrollTop > 650 &&
-  //       document.documentElement.scrollTop < 1300)
-  //   ) {
-  //     setNavColor("text-black");
-  //   } else if (
-  //     document.body.scrollTop >= 1300 ||
-  //     document.documentElement.scrollTop >= 1300
-  //   ) {
-  //     setNavColor("text-white");
-  //   } else {
-  //     setNavColor("text-white");
-  //   }
-  // }
 
   return (
     <nav
@@ -49,7 +28,10 @@ const Navbar = (props) => {
           >
             {" "}
             <span
-              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] 
+              ${
+                selectedId.home ? "bg-[length:100%_2px]" : "bg-[length:0%_2px]"
+              } bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               Home
             </span>
@@ -62,7 +44,10 @@ const Navbar = (props) => {
           >
             {" "}
             <span
-              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] ${
+                selectedId.about ? "bg-[length:100%_2px]" : "bg-[length:0%_2px]"
+              } 
+              bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               About
             </span>
@@ -75,7 +60,12 @@ const Navbar = (props) => {
           >
             {" "}
             <span
-              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] ${
+                selectedId.projects
+                  ? "bg-[length:100%_2px]"
+                  : "bg-[length:0%_2px]"
+              } 
+              bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               Projects
             </span>
@@ -88,7 +78,12 @@ const Navbar = (props) => {
           >
             {" "}
             <span
-              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
+              className={`dark:text-white text-black bg-left-bottom bg-gradient-to-r from-[#FF9119] to-[#f3932d] ${
+                selectedId.contacts
+                  ? "bg-[length:100%_2px]"
+                  : "bg-[length:0%_2px]"
+              } 
+              bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out py-[0.45rem]`}
             >
               Contact
             </span>

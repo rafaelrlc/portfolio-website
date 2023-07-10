@@ -29,6 +29,8 @@ const App = () => {
     }
   }, []);
 
+  console.log(theme);
+
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -42,16 +44,6 @@ const App = () => {
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {}, []);
-
-  // const changeBackground = (config) => {
-  //   if (config === "normal") {
-  //     setBackgroundConfig("normal_dark");
-  //   } else if (config === "among") {
-  //     setBackgroundConfig((prevConfig) =>
-  //       prevConfig === "among" ? "normal_dark" : "among"
-  //     );
-  //   }
-  // };
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
