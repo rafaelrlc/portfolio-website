@@ -8,6 +8,33 @@ const Navbar = (props) => {
   const [navColor, setNavColor] = useState("text-white");
   const [logo, setLogo] = useState(false);
 
+  const [selectedId, setSelectedId] = useState({
+    home: false,
+    about: false,
+    projects: false,
+    contacts: false,
+  });
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+  function scrollFunction() {
+    if (
+      (document.body.scrollTop > 650 && document.body.scrollTop < 1300) ||
+      (document.documentElement.scrollTop > 650 &&
+        document.documentElement.scrollTop < 1300)
+    ) {
+      setNavColor("text-black");
+    } else if (
+      document.body.scrollTop >= 1300 ||
+      document.documentElement.scrollTop >= 1300
+    ) {
+      setNavColor("text-white");
+    } else {
+      setNavColor("text-white");
+    }
+  }
+
   return (
     <nav
       className={`flex h-24  items-center bg-transparent w-full mx-auto px-4 md:justify-between justify-between fixed z-50 ease-linear transition-all duration-200`}
