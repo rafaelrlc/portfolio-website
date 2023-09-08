@@ -1,5 +1,4 @@
 import React, { useCallback, useState, useEffect } from "react";
-
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -16,6 +15,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { RiDownloadCloud2Line } from "react-icons/ri";
 
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
+import PopSelectors from "./components/PopSelectors";
 
 const App = () => {
   const [theme, setTheme] = useState(null);
@@ -51,12 +51,12 @@ const App = () => {
 
   return (
     <div className="dark:bg-black bg-[#f5f5f5] ease-linear transition-all duration-200">
-      <Particles
-        className="fixed"
+      {/* <Particles
+        className="z-[-99]"
         init={particlesInit}
         loaded={particlesLoaded}
         options={particles_hash[backgroundConfig]}
-      />
+      /> */}
 
       <button
         type="button"
@@ -65,45 +65,24 @@ const App = () => {
       >
         {theme === "dark" ? <MdOutlineDarkMode /> : <MdDarkMode />}
       </button>
+
+      <ul className="flex items-center gap-3 fixed bottom-10 left-10 z-[99]">
+        <PopSelectors icon={<FaLinkedinIn className="text-xl sm:text-2xl" />} />
+
+        <PopSelectors icon={<AiFillGithub className="text-xl sm:text-2xl" />} />
+
+        <PopSelectors
+          icon={<RiDownloadCloud2Line className="text-xl sm:text-2xl" />}
+        />
+      </ul>
+
       <div>
-        <ul className="flex items-center gap-3 fixed bottom-10 left-10 z-[99]">
-          <a
-            className="dark:bg-gray-700 bg-gray-500  hover:bg-gray-800 p-2 rounded-3xl text-white tooltip "
-            data-tip="Linkedin"
-            target="_blank"
-            href="https://linkedin.com/in/rafaelribeirolc"
-          >
-            <FaLinkedinIn className="text-xl sm:text-2xl" />
-          </a>
-
-          <a
-            className="dark:bg-gray-700 bg-gray-500 hover:bg-gray-800 p-2 rounded-3xl text-white tooltip"
-            data-tip="Github"
-            href="https://www.github.com/rafaelrlc"
-            target="_blank"
-          >
-            <AiFillGithub className="text-xl sm:text-2xl" />
-          </a>
-
-          <a
-            className="dark:bg-gray-700 bg-gray-500  hover:bg-gray-800 p-2 rounded-3xl text-white tooltip"
-            data-tip="Download Resume"
-          >
-            <RiDownloadCloud2Line
-              className="text-xl sm:text-2xl"
-              target="_blank"
-            />
-          </a>
-        </ul>
-
-        <div>
-          <Navbar theme={theme} />
-          <Hero />
-          <About />
-          <Projects />
-          <Contact />
-          <Footer />
-        </div>
+        <Navbar theme={theme} />
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
     </div>
   );
