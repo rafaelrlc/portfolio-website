@@ -13,7 +13,7 @@ const Hero = () => {
             <h1 className="sm:text-6xl text-4xl leading-none font-bold bg-left-bottom dark:text-gray-200 text-gray-700">
               <span className="hidden md:inline">HI, MY NAME IS</span>{" "}
               <span className=" bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
-                RAFAEL RIBEIRO
+                RAFAEL LIMA
               </span>
             </h1>
             <h1 className="sm:text-5xl lg:text-6xl text-3xl font-extrabold text-transparent text-[#FF9119] mt-1  bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
