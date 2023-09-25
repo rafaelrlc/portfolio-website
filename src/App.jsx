@@ -52,7 +52,6 @@ const App = () => {
   return (
     <div className="dark:bg-black bg-[#f5f5f5] ease-linear transition-all duration-200">
       {/* <Particles
-        className="z-[-99]"
         init={particlesInit}
         loaded={particlesLoaded}
         options={particles_hash[backgroundConfig]}

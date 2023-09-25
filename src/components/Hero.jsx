@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="flex md:flex-row items-center justify-around md:mx-10 mx-7 h-screen gap-5 "
+      className="flex md:flex-row items-center justify-around md:mx-10 mx-7 h-screen gap-5"
     >
       <div>
         <div className="group ease-linear transition-all duration-200 py-2 hover:cursor-pointer flex flex-col md:items-start items-center gap-3">

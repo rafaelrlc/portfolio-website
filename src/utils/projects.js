@@ -50,8 +50,8 @@ export const projects = [
     id: 6,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/c/c2/M31_09-01-2011_%28cropped%29.jpg",
-    title: "Andromeda 2.0",
-    description: "The version 2.0 of Andromeda, now with a lot more features.",
-    url: "https://github.com/rafaelrlc/Andromeda",
+    title: "Look-At",
+    description: "A full-stack social media app (currently working on).",
+    url: "https://github.com/rafaelrlc",
   },
 ];

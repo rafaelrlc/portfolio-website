@@ -37,7 +37,7 @@ const Navbar = (props) => {
 
   return (
     <nav
-      className={`flex h-24  items-center bg-transparent w-full mx-auto px-4 md:justify-between justify-between fixed z-50 ease-linear transition-all duration-200`}
+      className={`flex h-24  items-center bg-transparent w-full mx-auto px-4 md:justify-between justify-between fixed ease-linear transition-all duration-200`}
     >
       <img
         src={
