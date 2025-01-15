@@ -1,4 +1,3 @@
-import React from "react";
 import TypeWriterEffect from "react-typewriter-effect";
 
 const Hero = () => {
@@ -10,13 +9,12 @@ const Hero = () => {
       <div>
         <div className="group ease-linear transition-all duration-200 py-2 hover:cursor-pointer flex flex-col md:items-start items-center gap-3">
           <div className="flex lg:flex-col flex-col-reverse md:items-start items-center">
-            <h1 className="sm:text-6xl text-4xl leading-none font-bold bg-left-bottom dark:text-gray-200 text-gray-700">
-              <span className="hidden md:inline">HI, MY NAME IS</span>{" "}
+            <h1 className="sm:text-6xl text-3xl leading-none font-bold bg-left-bottom dark:text-gray-200 text-gray-700">
               <span className=" bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
-                RAFAEL LIMA
+                RAFAEL RIBEIRO
               </span>
             </h1>
-            <h1 className="sm:text-5xl lg:text-6xl text-3xl font-extrabold text-transparent text-[#FF9119] mt-1  bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
+            <h1 className="sm:text-4xl lg:text-4xl text-xl font-extrabold text-transparent text-[#FF9119] mt-1  bg-clip-text bg-gradient-to-r from-orange-400 to-orange-200">
               SOFTWARE DEVELOPER
             </h1>
           </div>{" "}
@@ -32,6 +30,8 @@ const Hero = () => {
                 "Next.js",
                 "TypeScript",
                 "Tailwind",
+                "Python",
+                "FastAPI",
                 "Java",
                 "Spring Boot",
               ]}
@@ -69,6 +69,9 @@ const Hero = () => {
         </pre>
         <pre data-prefix=">" className="text-[#27ea15]">
           <code>Python</code>
+        </pre>
+        <pre data-prefix=">" className="text-indigo-500">
+          <code>FastAPI</code>
         </pre>
       </div>
     </div>

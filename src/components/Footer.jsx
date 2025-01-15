@@ -17,7 +17,7 @@ const Footer = () => {
               <a
                 href="https://www.github.com/rafaelrlc"
                 className="hover:underline mr-4 md:mr-6"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 <span className="hidden sm:block">Github</span>
               </a>
@@ -25,9 +25,9 @@ const Footer = () => {
             <li className="flex items-center justify-center gap-2">
               <FaLinkedinIn className="text-2xl sm:text-xl" />
               <a
-                href="https://linkedin.com/in/rafaelribeirolc"
+                href="https://www.linkedin.com/in/rafaelribeirolc/"
                 className="hover:underline mr-4 md:mr-6"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 <span className="hidden sm:block">Linkedin</span>
               </a>

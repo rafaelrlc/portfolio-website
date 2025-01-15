@@ -6,9 +6,8 @@ import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
-import Particles from "react-tsparticles";
+
 import { loadFull } from "tsparticles";
-import { particles_hash } from "./utils/particles-config";
 
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -19,7 +18,6 @@ import PopSelectors from "./components/PopSelectors";
 
 const App = () => {
   const [theme, setTheme] = useState(null);
-  const [backgroundConfig, setBackgroundConfig] = useState("normal_dark2");
 
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -39,24 +37,12 @@ const App = () => {
     }
   }, [theme]);
 
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container) => {}, []);
-
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
     <div className="dark:bg-black bg-[#f5f5f5] ease-linear transition-all duration-200">
-      {/* <Particles
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={particles_hash[backgroundConfig]}
-      /> */}
-
       <button
         type="button"
         onClick={handleThemeSwitch}
@@ -66,22 +52,30 @@ const App = () => {
       </button>
 
       <ul className="flex items-center gap-3 fixed bottom-10 left-10 z-[99]">
-        <PopSelectors icon={<FaLinkedinIn className="text-xl sm:text-2xl" />} />
+        <PopSelectors icon={<FaLinkedinIn className="text-xl sm:text-2xl" />} link={'https://www.linkedin.com/in/rafaelribeirolc/'} />
 
-        <PopSelectors icon={<AiFillGithub className="text-xl sm:text-2xl" />} />
+        <PopSelectors icon={<AiFillGithub className="text-xl sm:text-2xl" />} link={'https://github.com/rafaelrlc'} />
 
-        <PopSelectors
-          icon={<RiDownloadCloud2Line className="text-xl sm:text-2xl" />}
-        />
+        <div>
+      {/* <a
+        className="dark:bg-gray-700 bg-gray-500 p-2 rounded-3xl text-white tooltip"
+        target="_blank"
+      >
+        <RiDownloadCloud2Line className="text-xl sm:text-2xl" />
+      </a> */}
+    </div>
+
+
+
       </ul>
 
       <div>
-        <Navbar theme={theme} />
+        {/* <Navbar theme={theme} /> */}
         <Hero />
-        <About />
+        {/* <About />
         <Projects />
         <Contact />
-        <Footer />
+        <Footer /> */}
       </div>
     </div>
   );
