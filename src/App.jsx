@@ -5,7 +5,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-
+import { GiBrazilFlag } from "react-icons/gi";
+import { LiaFlagUsaSolid } from "react-icons/lia";
 
 import { loadFull } from "tsparticles";
 
@@ -46,27 +47,41 @@ const App = () => {
       <button
         type="button"
         onClick={handleThemeSwitch}
-        className="fixed z-10 right-10 bottom-10 dark:bg-white bg-gray-600 text-lg p-2 rounded-3xl dark:text-black text-white"
+        className="fixed z-10 right-10 top-10  dark:bg-white bg-gray-600 text-lg p-2 rounded-3xl dark:text-black text-white"
       >
         {theme === "dark" ? <MdOutlineDarkMode /> : <MdDarkMode />}
       </button>
+
+      <div className="fixed z-10 right-10 bottom-10 flex items-center">
+        Resume:
+        <button
+          onClick={() => {
+            const link = document.createElement('a');
+            link.href = '/resume_rafael_ribeiro_ptbr.pdf';
+            link.download = 'resume_rafael_ribeiro_ptbr.pdf';
+            link.click();
+          }}
+          className="dark:bg-gray-700 bg-gray-500 p-2 rounded-3xl text-white tooltip ml-2"
+        >
+          <GiBrazilFlag className="text-xl sm:text-2xl" />
+        </button>
+        <button
+          onClick={() => {
+            const link = document.createElement('a');
+            link.href = '/resume_rafael_ribeiro_eng.pdf';
+            link.download = 'resume_rafael_ribeiro_eng.pdf';
+            link.click();
+          }}
+          className="dark:bg-gray-700 bg-gray-500 p-2 rounded-3xl text-white tooltip ml-2"
+        >
+          <LiaFlagUsaSolid className="text-xl sm:text-2xl" />
+        </button>
+      </div>
 
       <ul className="flex items-center gap-3 fixed bottom-10 left-10 z-[99]">
         <PopSelectors icon={<FaLinkedinIn className="text-xl sm:text-2xl" />} link={'https://www.linkedin.com/in/rafaelribeirolc/'} />
 
         <PopSelectors icon={<AiFillGithub className="text-xl sm:text-2xl" />} link={'https://github.com/rafaelrlc'} />
-
-        <div>
-      {/* <a
-        className="dark:bg-gray-700 bg-gray-500 p-2 rounded-3xl text-white tooltip"
-        target="_blank"
-      >
-        <RiDownloadCloud2Line className="text-xl sm:text-2xl" />
-      </a> */}
-    </div>
-
-
-
       </ul>
 
       <div>
